@@ -40,7 +40,7 @@
   </builders>
   <publishers>
     <join.JoinTrigger plugin="join@1.15">
-      <joinProjects></joinProjects>
+      <joinProjects>DemoProject_QA</joinProjects>
       <joinPublishers/>
       <evenIfDownstreamUnstable>false</evenIfDownstreamUnstable>
     </join.JoinTrigger>

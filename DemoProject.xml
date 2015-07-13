@@ -67,7 +67,7 @@ git push --tags
       <defaultExcludes>true</defaultExcludes>
     </hudson.tasks.ArtifactArchiver>
     <join.JoinTrigger plugin="join@1.15">
-      <joinProjects>Test_UT</joinProjects>
+      <joinProjects>DemoProject_UT</joinProjects>
       <joinPublishers/>
       <evenIfDownstreamUnstable>false</evenIfDownstreamUnstable>
     </join.JoinTrigger>
