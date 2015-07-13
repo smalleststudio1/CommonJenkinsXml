@@ -4,12 +4,6 @@
   <description></description>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <com.nirima.jenkins.plugins.docker.DockerJobProperty plugin="docker-plugin@0.9.3">
-      <tagOnCompletion>false</tagOnCompletion>
-      <additionalTag></additionalTag>
-      <pushOnSuccess>false</pushOnSuccess>
-      <cleanImages>true</cleanImages>
-    </com.nirima.jenkins.plugins.docker.DockerJobProperty>
     <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.11.3">
       <projectUrl>https://github.com/smalleststudio1/TestSAASCI/</projectUrl>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
@@ -24,9 +18,6 @@
     <branches>
       <hudson.plugins.git.BranchSpec>
         <name>*/master</name>
-      </hudson.plugins.git.BranchSpec>
-      <hudson.plugins.git.BranchSpec>
-        <name>*/test</name>
       </hudson.plugins.git.BranchSpec>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
@@ -46,29 +37,7 @@
       <regexToKill></regexToKill>
       <timeAllocated></timeAllocated>
     </hudson.plugins.xshell.XShellBuilder>
-    <hudson.tasks.Shell>
-      <command>echo $BUILD_NUMBER
-</command>
-    </hudson.tasks.Shell>
   </builders>
-  <publishers>
-    <join.JoinTrigger plugin="join@1.15">
-      <joinProjects>Test_UT</joinProjects>
-      <joinPublishers/>
-      <evenIfDownstreamUnstable>false</evenIfDownstreamUnstable>
-    </join.JoinTrigger>
-    <hudson.tasks.ArtifactArchiver>
-      <artifacts>hello.py</artifacts>
-      <allowEmptyArchive>false</allowEmptyArchive>
-      <onlyIfSuccessful>false</onlyIfSuccessful>
-      <fingerprint>false</fingerprint>
-      <defaultExcludes>true</defaultExcludes>
-    </hudson.tasks.ArtifactArchiver>
-    <hudson.tasks.Mailer plugin="mailer@1.11">
-      <recipients>juyi_huang@trend.com.tw</recipients>
-      <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
-      <sendToIndividuals>true</sendToIndividuals>
-    </hudson.tasks.Mailer>
-  </publishers>
+  <publishers/>
   <buildWrappers/>
 </project>
