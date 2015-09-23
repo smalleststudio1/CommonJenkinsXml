@@ -37,7 +37,7 @@
   <concurrentBuild>true</concurrentBuild>
   <builders>
     <hudson.plugins.xshell.XShellBuilder plugin="xshell@0.10">
-      <commandLine>python hello.py</commandLine>
+      <commandLine>python hello2.py</commandLine>
       <executeFromWorkingDir>false</executeFromWorkingDir>
       <regexToKill></regexToKill>
       <timeAllocated></timeAllocated>
